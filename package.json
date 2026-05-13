@@ -1,0 +1,63 @@
+{
+  "name": "@opensya/config",
+  "version": "0.28.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opensya/config.git"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "browser": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    },
+    "./browser": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/browser/index.mjs",
+      "default": "./dist/browser/index.mjs"
+    },
+    "./node": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "rslib build",
+    "dev": "rslib build --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "opensya"
+  ],
+  "license": "ISC",
+  "packageManager": "pnpm@10.32.1",
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@opensya/share": "workspace:*",
+    "@rslib/core": "^0.21.3",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^25.6.0",
+    "esbuild": "^0.28.0",
+    "lodash": "^4.18.1",
+    "mongoose": "^9.4.1",
+    "ofetch": "^1.5.1",
+    "pkg": "^5.8.1",
+    "rimraf": "^6.1.3",
+    "tsc-alias": "^1.8.16",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "zod": "^4.3.6"
+  }
+}
