@@ -1,7 +1,7 @@
 {
   "name": "@opensya/config",
-  "version": "0.28.0",
-  "private": "false",
+  "version": "0.29.0",
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/opensya/config.git"
@@ -29,6 +29,9 @@
       "default": "./dist/index.mjs"
     }
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist"
   ],
@@ -53,7 +56,7 @@
     "typescript": "^6.0.2"
   },
   "dependencies": {
-    "@opensya/share": "^0.28.0"
+    "@opensya/share": "0.28.0"
   },
   "packageManager": "pnpm@10.32.1"
 }
