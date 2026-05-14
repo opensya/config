@@ -25,9 +25,8 @@ jobs:
           node-version: 22
           cache: pnpm
 
-      - name: Debug npm auth
-        run: |
-          rm -rf pnpm-lock.yaml
+      - name: Remove pnpm-lock.yaml
+        run: rm -rf pnpm-lock.yaml
 
       - name: Install dependencies
         run: pnpm install

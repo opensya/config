@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "emitDeclarationOnly": false
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.d.ts"
+    ]
+}

@@ -1,5 +1,5 @@
 import { join } from 'node:path';
-import _ from 'lodash';
+
 import {
   DefineOpensyaConfig,
   InputConfig,

@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@opensya/share':
-        specifier: 0.28.0
-        version: 0.28.0
+        specifier: 0.28.8
+        version: 0.28.8
     devDependencies:
       '@babel/core':
         specifier: ^7.29.0
@@ -454,8 +454,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@opensya/share@0.28.0':
-    resolution: {integrity: sha512-tXfyzBGGTyKgRgh3vZ0Suw0Tzjk3UheKEB5C7bDXHUoxFUqwxhj0rCb0f9wZEAPQmVAdfh/WVsRxUUUHgUPTvQ==, tarball: https://npm.pkg.github.com/download/@opensya/share/0.28.0/99f7a30afd8bd060c655d6bec627591a658dd0ce}
+  '@opensya/share@0.28.8':
+    resolution: {integrity: sha512-krXsHQz7m1Q3xO7N+41jd9rsvybFW7KBju5epFQdpYFccOChLYdWU7WwoYz5GGIptxYlt1ahonmR92k8sQdVxw==, tarball: https://npm.pkg.github.com/download/@opensya/share/0.28.8/e76e920d3566e49c389c7d5b467c128ff121c185}
 
   '@rsbuild/core@2.0.6':
     resolution: {integrity: sha512-0/u7oTgPp9NsL7E7qXzYiOOPAsOJiDbOr0FmG6gizJDIpYK8nospogNrwQ00SG0had9fdhLI7XkhP160IaLnWw==}
@@ -1531,7 +1531,7 @@ snapshots:
 
   '@babel/generator@7.18.2':
     dependencies:
-      '@babel/types': 7.19.0
+      '@babel/types': 7.29.0
       '@jridgewell/gen-mapping': 0.3.13
       jsesc: 2.5.2
 
@@ -1582,7 +1582,7 @@ snapshots:
 
   '@babel/parser@7.18.4':
     dependencies:
-      '@babel/types': 7.19.0
+      '@babel/types': 7.29.0
 
   '@babel/parser@7.29.3':
     dependencies:
@@ -1921,7 +1921,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.20.1
 
-  '@opensya/share@0.28.0':
+  '@opensya/share@0.28.8':
     dependencies:
       lodash: 4.18.1
       mongoose: 9.6.2

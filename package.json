@@ -57,7 +57,7 @@
     "typescript": "^6.0.2"
   },
   "dependencies": {
-    "@opensya/share": "0.28.0"
+    "@opensya/share": "0.28.8"
   },
   "packageManager": "pnpm@10.32.1"
 }
