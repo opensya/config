@@ -48,7 +48,8 @@ jobs:
       # Publish packages
       - name: Publish to GitHub Packages
         uses: changesets/action@v1
-        with: pnpm -r publish --registry=https://npm.pkg.github.com --no-git-checks
+        with:
+          publish: pnpm -r publish --registry=https://npm.pkg.github.com --no-git-checks
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
