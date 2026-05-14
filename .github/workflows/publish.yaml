@@ -5,14 +5,14 @@ on:
     branches:
       - develop
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   publish:
     name: Publish Packages
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      packages: read
 
     steps:
       # Checkout repository
