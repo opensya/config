@@ -1,0 +1,54 @@
+name: Publish GitHub Packages
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  publish:
+    name: Publish Packages
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      # Checkout repository
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Setup pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      # Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://npm.pkg.github.com
+          cache: pnpm
+
+      # Enable corepack
+      - name: Enable Corepack
+        run: corepack enable
+
+      # Install dependencies
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Build packages
+      - name: Build
+        run: pnpm build
+
+      # Publish packages
+      - name: Publish to GitHub Packages
+        uses: changesets/action@v1
+        with: pnpm -r publish --registry=https://npm.pkg.github.com --no-git-checks
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

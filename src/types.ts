@@ -17,6 +17,8 @@ export interface OpensyaConfig {
 
   /** @default '.opensya' */ output?: string;
 
+  /** @default '.env */ envFile?: string;
+
   i18n?: {
     /** @default 'en' */
     defaultLocale?: string;
