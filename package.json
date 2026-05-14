@@ -43,7 +43,8 @@
     "clean": "rm -rf dist"
   },
   "keywords": [
-    "opensya"
+    "opensya",
+    "config"
   ],
   "license": "ISC",
   "devDependencies": {
