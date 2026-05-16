@@ -1,5 +1,0 @@
----
-'@opensya/config': minor
----
-
-Test
