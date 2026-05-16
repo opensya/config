@@ -25,6 +25,13 @@ jobs:
           node-version: 22
           cache: pnpm
 
+      - name: Configure npm auth
+        run: |
+          echo "@opensya:registry=https://npm.pkg.github.com" > ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> ~/.npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Remove pnpm-lock.yaml
         run: rm -rf pnpm-lock.yaml
 

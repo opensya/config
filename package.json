@@ -39,6 +39,7 @@
   "scripts": {
     "build": "rslib build",
     "dev": "rslib build --watch",
+    "dev0": "tsx --watch ./src/dev",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf dist"
   },
@@ -57,7 +58,7 @@
     "typescript": "^6.0.2"
   },
   "dependencies": {
-    "@opensya/share": "0.28.8"
+    "@opensya/share": "latest"
   },
   "packageManager": "pnpm@10.32.1"
 }

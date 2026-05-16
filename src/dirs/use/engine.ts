@@ -36,22 +36,33 @@ export class UseDirRelative<T extends UseDirOptions> {
 
   relative = {
     from: (from: string) => {
-      return normalizeDir(relative(this.dir, from));
+      const dir = relative(this.dir, from);
+      return useDir({ dir });
+      // return normalizeDir(relative(this.dir, from));
     },
 
     to: (to: string) => {
-      return normalizeDir(relative(to, this.dir));
+      const dir = relative(to, this.dir);
+      return useDir({ dir });
+      // return normalizeDir(relative(to, this.dir));
     },
   };
 }
 
 export class UseDir<T extends UseDirOptions> extends UseDirRelative<T> {
   join(...paths: string[]) {
-    return join(this.dir, ...paths);
+    const dir = join(this.dir, ...paths);
+    return useDir({ dir });
   }
 
   resolve(...paths: string[]) {
-    return resolve(this.dir, ...paths);
+    const dir = resolve(this.dir, ...paths);
+    return useDir({ dir });
+  }
+
+  normalize() {
+    const dir = normalizeDir(this.dir);
+    return useDir({ dir });
   }
 
   stats(options?: Parameters<typeof statSync>[1]) {
@@ -143,8 +154,30 @@ export class UseDir<T extends UseDirOptions> extends UseDirRelative<T> {
     if (!this.exists()) return;
     rmSync(this.dir, options);
   }
+
+  toString() {
+    return this.dir;
+  }
+
+  valueOf() {
+    return this.dir;
+  }
 }
+
+export type UseDirInstance<T extends UseDirOptions> = UseDir<T> &
+  Omit<T, 'dir'>;
 
 function escapeRegExp(value: string) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+export function useDir<const T extends UseDirOptions>(
+  options: T,
+): UseDirInstance<T> {
+  const dir = new UseDir(options) as UseDirInstance<T>;
+
+  const { dir: _dir, ...rest } = options;
+  Object.assign(dir, rest);
+
+  return dir;
 }
