@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@opensya/share':
         specifier: latest
-        version: 0.28.8
+        version: 0.28.10
     devDependencies:
       '@babel/core':
         specifier: ^7.29.0
@@ -454,8 +454,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@opensya/share@0.28.8':
-    resolution: {integrity: sha512-krXsHQz7m1Q3xO7N+41jd9rsvybFW7KBju5epFQdpYFccOChLYdWU7WwoYz5GGIptxYlt1ahonmR92k8sQdVxw==, tarball: https://npm.pkg.github.com/download/@opensya/share/0.28.8/e76e920d3566e49c389c7d5b467c128ff121c185}
+  '@opensya/share@0.28.10':
+    resolution: {integrity: sha512-pMQ0OXBYCjjaetsccV2eK6mqdA1A/VpkP7Ba57u6fNpVLOv6UwxicWCzU9y0oH8aju2B0QoANQQ4XN3OVdgRBg==, tarball: https://npm.pkg.github.com/download/@opensya/share/0.28.10/a45643243b72c2e44218bd587c93ced607c6b88a}
 
   '@rsbuild/core@2.0.6':
     resolution: {integrity: sha512-0/u7oTgPp9NsL7E7qXzYiOOPAsOJiDbOr0FmG6gizJDIpYK8nospogNrwQ00SG0had9fdhLI7XkhP160IaLnWw==}
@@ -1921,7 +1921,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.20.1
 
-  '@opensya/share@0.28.8':
+  '@opensya/share@0.28.10':
     dependencies:
       lodash: 4.18.1
       mongoose: 9.6.2
