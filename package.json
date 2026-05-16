@@ -1,6 +1,6 @@
 {
   "name": "@opensya/config",
-  "version": "0.29.0",
+  "version": "0.29.2-alpha.0",
   "private": false,
   "repository": {
     "type": "git",
@@ -30,8 +30,7 @@
     }
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "files": [
     "dist"
@@ -40,7 +39,6 @@
   "scripts": {
     "build": "rslib build",
     "dev": "rslib build --watch",
-    "dev0": "tsx --watch ./src/dev",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf dist"
   },
@@ -51,7 +49,6 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.29.0",
-    "@changesets/cli": "^2.31.0",
     "@rslib/core": "^0.21.3",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^25.6.0",
